@@ -27,6 +27,18 @@ public class BankController
     @Autowired
     BankService bankService;
 
+
+    @GetMapping
+    public Bank getDafaultBank()
+    {
+        Bank bank = new Bank();
+        bank.setBankName("HDFC Bank");
+        bank.setCity("Bangalore");
+        return bank;
+    }
+
+
+
     /**
      * Hateoas ( Hypertext as the Engine of Application State )
      * provide and extra detail in response
